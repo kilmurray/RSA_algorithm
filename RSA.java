@@ -161,8 +161,9 @@ public class RSA extends JFrame
 				String myHidden = hidden.trim();
 				BigInteger d = al.RSA(p, q, e);
 				byte[] decrypt = al.decrypt(encrypted,d,n);
+				System.out.println(decrypt);
 				String hidden_message = al.bytesToString(decrypt);
-				decrypted_message.setText(hidden_message);
+				decrypted_message.setText(new String(hidden_message));
 			}
 			
 		}
